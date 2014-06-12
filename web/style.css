@@ -18,8 +18,7 @@ html, body, #appContainer, #pageContainer{
 }
 
 #home{
-	background-color:red;
-}
+	background-color:tan}
 #scoreboard{
 	background-color:blue;
 }
@@ -27,6 +26,11 @@ html, body, #appContainer, #pageContainer{
 h1{
 	text-align:center;
 }
+h1#title{
+	font-size:48px;
+	margin-top:5%;
+}
+
 
 div#playerSelect{
 	position:absolute;
@@ -34,7 +38,7 @@ div#playerSelect{
 	bottom:30%;
 	width:60%;
 	height:auto;
-	background-color:blue;
+	background-color:grey;
 }
 div#minus{
 	position:absolute;
@@ -56,4 +60,9 @@ div#startGame{
 	width:60%;
 	height:auto;
 	background-color:limegreen;
+	opacity:0;
+}
+
+table, th{
+    border: 1px solid black;
 }
