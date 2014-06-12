@@ -20,50 +20,40 @@ html, body, #appContainer, #pageContainer{
 #home{
 	background-color:red;
 }
-#choose{
+#scoreboard{
 	background-color:blue;
 }
-#players{
-	background-color:green;
-}
-#color{
-	background-color:purple;
-}
-#scoreboard{
-	background-color:orange;
-}
 
-table{
-	position:absolute;
-	width:80%;
-	margin-left:10%;
-	bottom:10%;
-}
-table#scoreTable{
-	position:absolute;
-	height:80%;
-	width:80%;
-	margin-left:10%;
-	bottom:10%;
-}
-
-td{
-	border-style:inset;
-	border-right:medium single #666;
-	border-radius: 5px;
-	margin:20px;
-	cellspacing:20px;
-	
-}
-h1, h2{
+h1{
 	text-align:center;
 }
-h1{
-	margin-top:20%;
+
+div#playerSelect{
+	position:absolute;
+	margin-left:20%;
+	bottom:30%;
+	width:60%;
+	height:auto;
+	background-color:blue;
 }
-table{
-	height:50%;
+div#minus{
+	position:absolute;
+	height:100%;
+	width:50%;
+	top:0px;
 }
-table td{
-	height:20%;
+div#plus{
+	position:absolute;
+	right:0px;
+	height:100%;
+	width:50%;
+	top:0px;
+}
+div#startGame{
+	position:absolute;
+	margin-left:20%;
+	bottom:0px;
+	width:60%;
+	height:auto;
+	background-color:limegreen;
 }
