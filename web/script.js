@@ -15,7 +15,7 @@ function sizeContent() {
 	
 	$("#pageContainer").css("width",pageWidth*5);
 	
-	$(".page").css("width",pageWidth/2);
+	$(".page").css("width",pageWidth/5);
 	
 	
 }
