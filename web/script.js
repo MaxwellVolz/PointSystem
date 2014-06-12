@@ -21,6 +21,7 @@ function sizeContent() {
 }
 
 var playerCount = 0;
+var scoreCount = 0;
 
 
 $(document).ready(function() {
@@ -62,7 +63,7 @@ function startIt(){
 	while (playerCountx > 0) { 
 		$("tr#mainRow td#mainD").append( 
 		
-			"<td><div class='testBox' id='scoreRow"+playerCountx+"'></div></td>"	
+			"<td><div class='testBox' id='scoreRow"+playerCountx+"'><h1 id='scoreTotal'>0</h1><div id='line'></div><div id='scoreSelect'><div id='playersSpacing'><h1 id='players'>0</h1></div><div id='minus'><h1>-</h1></div><div id='plus'><h1>+</h1></div></div></div></td>"	
 			
 			);
 			
