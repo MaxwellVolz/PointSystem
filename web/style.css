@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, #appContainer, #pageContainer{
+	height:100%;
+	width:100%;
+	overflow:hidden;
+	margin:0px;
+	padding:0px;
+	background-color:#CCC;
+}
+
+.page{
+	position:relative;
+	float:left;
+	height:100%;
+	width:100%;
+}
