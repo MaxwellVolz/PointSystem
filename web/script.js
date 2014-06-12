@@ -13,9 +13,7 @@ function sizeContent() {
 	var pageWidth = $("body").width();
 	var pageHeight = $("body").height();
 	
-	$("#pageContainer").css("width",pageWidth*5);
+	$("#pageContainer").css("width",pageWidth*4);
 	
-	$(".page").css("width",pageWidth/5);
-	
-	
+	$(".page").css("width",pageWidth/4);
 }

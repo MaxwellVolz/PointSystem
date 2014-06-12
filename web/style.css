@@ -39,6 +39,13 @@ table{
 	margin-left:10%;
 	bottom:10%;
 }
+table#scoreTable{
+	position:absolute;
+	height:80%;
+	width:80%;
+	margin-left:10%;
+	bottom:10%;
+}
 
 td{
 	border-style:inset;
