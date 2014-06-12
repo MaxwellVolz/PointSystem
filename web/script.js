@@ -26,6 +26,7 @@ var playerCount = 0;
 $(document).ready(function() {
 	
 	
+	
 	$( "div#plus" ).mousedown(function(){
 		$("div#startGame").css("opacity",1);
 		
@@ -51,14 +52,26 @@ $(document).ready(function() {
 	
 });
 
+
+
 function startIt(){
-	while (playerCount > 0) { 
+	var pageWidth = $("body").width();
+	var pageHeight = $("body").height();
+	var playerCountx = playerCount;
+	
+	while (playerCountx > 0) { 
 		$("tr#mainRow td#mainD").append( 
 		
-			"<td><input type='text'/></td>"	
+			"<td><div class='testBox' id='scoreRow"+playerCountx+"'></div></td>"	
 			
 			);
-		
-		--playerCount;
+			
+	var pageWidth = $("body").width();
+	var pageHeight = $("body").height();
+
+	--playerCountx;
 	}
+	
+	$("td#mainD td").css("height",pageHeight);
+	$("td#mainD td").css("width",pageWidth/playerCount);
 }

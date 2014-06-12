@@ -66,3 +66,9 @@ div#startGame{
 table, th{
     border: 1px solid black;
 }
+div.testBox{
+	height:100%;
+	width:100%;
+	background-color:orange;
+}
+
