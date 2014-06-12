@@ -16,3 +16,41 @@ html, body, #appContainer, #pageContainer{
 	height:100%;
 	width:100%;
 }
+
+#home{
+	background-color:red;
+}
+#choose{
+	background-color:blue;
+}
+#players{
+	background-color:green;
+}
+#color{
+	background-color:purple;
+}
+#scoreboard{
+	background-color:orange;
+}
+
+table{
+	position:absolute;
+	width:80%;
+	margin-left:10%;
+	bottom:10%;
+}
+
+td{
+	border-style:inset;
+	border-right:medium single #666;
+	border-radius: 5px;
+	margin:20px;
+	cellspacing:20px;
+	
+}
+h1, h2{
+	text-align:center;
+}
+h1#homeTitle{
+	margin-top:20%;
+}
