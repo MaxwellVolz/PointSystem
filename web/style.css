@@ -35,24 +35,24 @@ h1#title{
 div#playerSelect{
 	position:absolute;
 	margin-left:20%;
-	bottom:30%;
+	top:40%;
 	width:60%;
 	height:auto;
-	background-color:grey;
 }
-div#minus{
+div#minus,div#minus2{
 	position:absolute;
 	height:100%;
 	width:50%;
 	top:0px;
 }
-div#plus{
+div#plus,div#plus2{
 	position:absolute;
 	right:0px;
 	height:100%;
 	width:50%;
 	top:0px;
 }
+
 div#startGame{
 	position:absolute;
 	margin-left:20%;
@@ -108,5 +108,10 @@ div#playersSpacing{
 	top:0px;
 }
 
-
+div#plus2{
+	z-index:20;
+}
+div#minus2{
+	z-index:20;
+}
 
