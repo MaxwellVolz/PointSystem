@@ -39,13 +39,13 @@ div#playerSelect{
 	width:60%;
 	height:auto;
 }
-div#minus,div#minus2{
+div#minus, div.minus{
 	position:absolute;
 	height:100%;
 	width:50%;
 	top:0px;
 }
-div#plus,div#plus2{
+div#plus, div.plus{
 	position:absolute;
 	right:0px;
 	height:100%;
@@ -56,7 +56,7 @@ div#plus,div#plus2{
 div#startGame{
 	position:absolute;
 	margin-left:20%;
-	bottom:0px;
+	bottom:5%;
 	width:60%;
 	height:auto;
 	background-color:limegreen;
@@ -66,9 +66,7 @@ div#startGame{
 table, th{
     border: 1px solid black;
 }
-div{
-	
-}
+
 div.testBox{
 	height:100%;
 	width:100%;
@@ -80,7 +78,7 @@ div#scoreboardContainer{
 	background-color:red;
 }
 
-h1#scoreTotal{
+h1.scoreTotal{
 	position:relative;
 	margin:0px;
 	top:10%;
@@ -93,6 +91,7 @@ div#line{
 	height:1px;
 	top:12%;
 	background-color:black;
+	z-index:10;
 }
 div#scoreSelect{
 	position:relative;
@@ -101,6 +100,17 @@ div#scoreSelect{
 	width:80%;
 	height:10%;
 }
+
+div.startGame{
+	position:relative;
+	top:70%;
+	margin-left:10%;
+	width:80%;
+	height:auto;
+	background-color:limegreen;
+	opacity:0;
+}
+
 div#playersSpacing{
 	position:absolute;
 	height:100%;
@@ -108,10 +118,10 @@ div#playersSpacing{
 	top:0px;
 }
 
-div#plus2{
+div.plus{
 	z-index:20;
 }
-div#minus2{
+div.minus{
 	z-index:20;
 }
 

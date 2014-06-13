@@ -53,6 +53,8 @@ $(document).ready(function() {
 		$( "div#scoreboard" ).css("z-index","20");
 	});
 	
+	
+	
 });
 
 
@@ -65,7 +67,7 @@ function startIt(){
 	while (x > 0) { 
 		$("tr#mainRow td#mainD").append( 
 		
-			"<td><div class='testBox' id='scoreRow"+x+"'><h1 id='scoreTotal'>0</h1><div id='line'></div><div id='scoreSelect'><div id='minus2'><h1>-</h1></div><div id='plus2' value='"+x+"'><h1>+</h1></div><div id='playersSpacing'><h1 id='players"+x+"'>0</h1></div></div><div id='startGame'><h1>ok</h1></div></div></td>"	
+			"<td><div class='testBox' id='scoreRow"+x+"'><h1 class='scoreTotal' id='scoreTotal"+x+"'>0</h1><div id='line'></div><div id='scoreSelect'><div id='"+x+"' class='minus'><h1>-</h1></div><div id='"+x+"' class='plus' value='"+x+"'><h1>+</h1></div><div id='playersSpacing'><h1 id='players"+x+"'>0</h1></div></div><div class='startGame'><h1>ok</h1></div></div></td>"	
 			
 			);
 			
@@ -80,15 +82,58 @@ function startIt(){
 	$("td#mainD td").css("height",pageHeight);
 	$("td#mainD td").css("width",pageWidth/playerCount);
 	
-	$( "div#scoreSelect div#plus2" ).on('click',notify);
-	$( "div#scoreSelect div#minus2" ).on('click',notify);
+	
+	//$( "div#scoreSelect div.plus" ).on('click',notify);
+	$('div#scoreSelect div.minus').click(function(){
+        subtractify(this.id);
+    });
+	
+	$('div#scoreSelect div.plus').click(function(){
+        addify(this.id);
+    });
+	
+	$('div.startGame').click(function(){
+        submitScore(playerCount);
+    });
 	
 
 }
 
+ 
+function addify(y){
+	var scoreToChange = 'h1#players'+y;
+	
+	var currentScore = $(scoreToChange).html();
+	++currentScore;
+	
+	$(scoreToChange).html(currentScore);
+	
+	if(currentScore == 0){
+			$("div.startGame").css("opacity",0);
+	}
+	if(currentScore != 0){
+			$("div.startGame").css("opacity",1);
+	}
+	
+}
 
-$( "div#testbox" ).on( "click", notify );
+function subtractify(z){
+	var scoreToChange = 'h1#players'+z;
+	
+	var currentScore = $(scoreToChange).html();
+	--currentScore;
+	
+	$(scoreToChange).html(currentScore);
+	
+	if(currentScore == 0){
+			$("div.startGame").css("opacity",0);
+	}
+	if(currentScore != 0){
+			$("div.startGame").css("opacity",1);
+	}
+}
 
-function notify(y){
-	alert("hey"+y);
+function submitScore(){
+	alert(playerCount);
+	
 }
