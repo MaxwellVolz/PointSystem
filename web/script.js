@@ -67,7 +67,7 @@ function startIt(){
 	while (x > 0) { 
 		$("tr#mainRow td#mainD").append( 
 		
-			"<td><div class='testBox' id='scoreRow"+x+"'><h1 class='scoreTotal' id='scoreTotal"+x+"'>0</h1><div id='line'></div><div id='scoreSelect'><div id='"+x+"' class='minus'><h1>-</h1></div><div id='"+x+"' class='plus' value='"+x+"'><h1>+</h1></div><div id='playersSpacing'><h1 id='players"+x+"'>0</h1></div></div><div class='startGame'><h1>ok</h1></div></div></td>"	
+			"<td><div class='testBox' id='scoreRow"+x+"'><h1 class='scoreTotal' id='scoreTotal"+x+"'>0</h1><div id='line'></div><div id='scoreSelect'><div id='"+x+"' class='minus'><h1>-</h1></div><div id='"+x+"' class='plus' value='"+x+"'><h1>+</h1></div><div id='playersSpacing'><h1 id='players"+x+"'>0</h1></div></div><div class='startGame' id='addScore"+x+"' value='"+x+"'><h1>ok</h1></div></div></td>"	
 			
 			);
 			
@@ -93,7 +93,9 @@ function startIt(){
     });
 	
 	$('div.startGame').click(function(){
-        submitScore(playerCount);
+		var v = this.id.slice(8,9);
+		
+        submitScore(v);
     });
 	
 
@@ -102,6 +104,7 @@ function startIt(){
  
 function addify(y){
 	var scoreToChange = 'h1#players'+y;
+	var submitToShow = '#addScore'+y;
 	
 	var currentScore = $(scoreToChange).html();
 	++currentScore;
@@ -109,16 +112,17 @@ function addify(y){
 	$(scoreToChange).html(currentScore);
 	
 	if(currentScore == 0){
-			$("div.startGame").css("opacity",0);
+			$(submitToShow).css("opacity",0);
 	}
 	if(currentScore != 0){
-			$("div.startGame").css("opacity",1);
+			$(submitToShow).css("opacity",1);
 	}
 	
 }
 
 function subtractify(z){
 	var scoreToChange = 'h1#players'+z;
+	var submitToShow = '#addScore'+z;
 	
 	var currentScore = $(scoreToChange).html();
 	--currentScore;
@@ -126,14 +130,29 @@ function subtractify(z){
 	$(scoreToChange).html(currentScore);
 	
 	if(currentScore == 0){
-			$("div.startGame").css("opacity",0);
+			$(submitToShow).css("opacity",0);
 	}
 	if(currentScore != 0){
-			$("div.startGame").css("opacity",1);
+			$(submitToShow).css("opacity",1);
 	}
 }
 
-function submitScore(){
-	alert(playerCount);
+function submitScore(f){
+	var scoreToChange = 'h1#players'+f;
+	var currentScore = $(scoreToChange).html();
+	
+	var totalScore = 'h1#scoreTotal'+f;
+	var currentTotal = $(totalScore).html();
+	
+	
+	var newTotal= parseInt(currentTotal)+parseInt(currentScore);
+	
+	$(totalScore).html(newTotal);
+	$(scoreToChange).html("0");
+	
+
+	submitToShow = '#addScore'+f;
+	$(submitToShow).css("opacity",0);
+
 	
 }
