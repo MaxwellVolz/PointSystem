@@ -24,6 +24,7 @@ function sizeContent() {
 
 var playerCount = 0;
 var scoreCount = 0;
+var colorNumber = 0;
 
 
 
@@ -57,6 +58,7 @@ $(document).ready(function() {
 	
 	
 	
+	
 });
 
 
@@ -69,7 +71,7 @@ function startIt(){
 	while (x > 0) { 
 		$("tr#mainRow td#mainD").append( 
 		
-			"<td><div class='testBox' id='scoreRow"+x+"'><h1 class='scoreTotal' id='scoreTotal"+x+"'>0</h1><div id='line'></div><div id='scoreSelect'><div id='"+x+"' class='minus'><h1>-</h1></div><div id='"+x+"' class='plus' value='"+x+"'><h1>+</h1></div><div id='playersSpacing'><h1 id='players"+x+"'>0</h1></div></div><div class='scoreLog' id='scoreLog"+x+"'><div id='scoreLogContainer'><table class='scoreTable' id='scoreTable"+x+"'><tbody></tbody></table></div></div><div class='startGame' id='addScore"+x+"' value='"+x+"'><div id='check'></div></div></div></td>"	
+			"<td><div class='testBox' id='scoreRow"+x+"'><div class='scoreContainer' id='"+x+"'><h1 class='scoreTotal' id='scoreTotal"+x+"' >0</h1></div><div id='line'></div><div id='scoreSelect'><div id='"+x+"' class='minus'><h1>-</h1></div><div id='"+x+"' class='plus' value='"+x+"'><h1>+</h1></div><div id='playersSpacing'><h1 id='players"+x+"'>0</h1></div></div><div class='scoreLog' id='scoreLog"+x+"'><div id='scoreLogContainer'><table class='scoreTable' id='scoreTable"+x+"'><tbody></tbody></table></div></div><div class='startGame' id='addScore"+x+"' value='"+x+"'><div id='check'></div></div></div></td>"	
 			
 			);
 			
@@ -99,6 +101,12 @@ function startIt(){
 		
         submitScore(v);
     });
+	
+	$('div.scoreContainer').click(function(){
+		var c= this.id;
+		
+		colorIt(c);
+	});
 	
 
 }
@@ -161,4 +169,21 @@ function submitScore(f){
 	//var tableLog2 = 'div#scoreLog';
 	$(tableLog).after("<tr class='scoreEntry'><td><h3>"+currentScore+"</h3></td></tr>");
 	//$(tableLog2).append("<div>ht</div>");
+}
+
+function colorIt(c){
+	var colorCycle = ["Red", "Blue", "Purple", "Yellow", "Orange", "DarkGreen"];
+	
+	var currentColor = colorCycle[colorNumber];
+	
+	var colorToChange = 'div#scoreRow'+c;
+	$(colorToChange).css("background-color",currentColor);
+	
+	++colorNumber;
+	//alert(currentColor);
+	if(colorNumber > 6){
+		colorNumber = 0;
+	}
+	
+	
 }

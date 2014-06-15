@@ -1,6 +1,15 @@
 @charset "utf-8";
 /* CSS Document */
 
+h1,h3{
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
 html, body, #appContainer, #pageContainer{
 	height:100%;
 	width:100%;
@@ -27,18 +36,22 @@ h1{
 	text-align:center;
 }
 h1#title{
-	font-size:64px;
+	font-size: 10vw;
 	margin-top:5%;
 }
 
 
 div#playerSelect{
 	position:absolute;
-	font-size:46px;
+	
 	margin-left:20%;
 	top:40%;
 	width:60%;
 	height:auto;
+}
+div#playerSelect h1{
+	font-size: 12vw;
+line-height:40px;
 }
 div#minus, div.minus{
 	position:absolute;
@@ -79,9 +92,13 @@ div#scoreboardContainer{
 
 h1.scoreTotal{
 	position:relative;
+	height:20%;
 	margin:0px;
-	top:2px;
-	font-size:100px;
+	top:-10px;
+	font-size: 13vw;
+}
+div.scoreContainer{
+	z-index:20;
 }
 div#line{
 	position:relative;
@@ -98,6 +115,7 @@ div#scoreSelect{
 	margin-left:10%;
 	width:80%;
 	height:10%;
+	
 }
 
 div.startGame{
@@ -154,7 +172,7 @@ h3{
 input#resetGame{
 	position:absolute;
 	z-index:100;
-	top:13%;
+	top:8%;
 	width:5%;
 	height:10%;
 	left:2%;
@@ -167,17 +185,17 @@ td{
 tr.scoreEntry td,tr.scoreEntry h3{
   border-width: 0px 0;
   text-align:center;
-  font-size:36px;
+  font-size: 3vw;
   line-height:20px;
   margin:10px;
 }
 div#scoreSelect h1{
 	margin-top:0px;
-	font-size:60px;
+	font-size: 5vw;
 }
 div.startGame div#check{
 	position:absolute;
-	font-size:24px;
+	 font-size: 5vw;
 	top:18%;
 	left:20%;
 	height:100%;
