@@ -63,9 +63,7 @@ div#startGame{
 	opacity:0;
 }
 
-table, th{
-    border: 1px solid black;
-}
+
 
 div.testBox{
 	height:100%;
@@ -103,7 +101,7 @@ div#scoreSelect{
 
 div.startGame{
 	position:relative;
-	top:70%;
+	top:30%;
 	margin-left:10%;
 	width:80%;
 	height:auto;
@@ -123,5 +121,47 @@ div.plus{
 }
 div.minus{
 	z-index:20;
+}
+
+
+div.scoreLog{
+	position:relative;
+	width:80%;
+	top:20%;
+	margin-left:10%;
+	height:40%;
+	overflow:scroll;
+	background-color:white; 
+	overflow: hidden;  
+}
+div#scoreLogContainer{
+	position:absolute;
+	width:100%;
+	height:100%;;
+	overflow-y: scroll;
+}
+table.scoreTable{
+	position:absolute;
+	width:100%;
+	height:auto;
+	border:none;
+	    
+}
+h3{
+	text-align:center;
+}
+input#resetGame{
+	position:absolute;
+	z-index:100;
+	top:0px;
+	left:0px;
+}
+
+td{
+	border: solid;
+  border-width: 1px 0;
+}
+tr.scoreEntry td{
+  border-width: 0px 0;
 }
 
