@@ -27,13 +27,14 @@ h1{
 	text-align:center;
 }
 h1#title{
-	font-size:48px;
+	font-size:64px;
 	margin-top:5%;
 }
 
 
 div#playerSelect{
 	position:absolute;
+	font-size:46px;
 	margin-left:20%;
 	top:40%;
 	width:60%;
@@ -58,7 +59,7 @@ div#startGame{
 	margin-left:20%;
 	bottom:5%;
 	width:60%;
-	height:auto;
+	height:18%;
 	background-color:limegreen;
 	opacity:0;
 }
@@ -79,21 +80,21 @@ div#scoreboardContainer{
 h1.scoreTotal{
 	position:relative;
 	margin:0px;
-	top:10%;
-	font-size:64px;
+	top:2px;
+	font-size:100px;
 }
 div#line{
 	position:relative;
 	margin-left:5%;
 	width:90%;
 	height:1px;
-	top:12%;
+	top:2%;
 	background-color:black;
 	z-index:10;
 }
 div#scoreSelect{
 	position:relative;
-	top:15%;
+	top:4%;
 	margin-left:10%;
 	width:80%;
 	height:10%;
@@ -101,10 +102,10 @@ div#scoreSelect{
 
 div.startGame{
 	position:relative;
-	top:30%;
+	top:9%;
 	margin-left:10%;
 	width:80%;
-	height:auto;
+	height:10%;
 	background-color:limegreen;
 	opacity:0;
 }
@@ -127,7 +128,7 @@ div.minus{
 div.scoreLog{
 	position:relative;
 	width:80%;
-	top:20%;
+	top:7%;
 	margin-left:10%;
 	height:40%;
 	overflow:scroll;
@@ -153,15 +154,48 @@ h3{
 input#resetGame{
 	position:absolute;
 	z-index:100;
-	top:0px;
-	left:0px;
+	top:13%;
+	width:5%;
+	height:10%;
+	left:2%;
 }
 
 td{
 	border: solid;
   border-width: 1px 0;
 }
-tr.scoreEntry td{
+tr.scoreEntry td,tr.scoreEntry h3{
   border-width: 0px 0;
+  text-align:center;
+  font-size:36px;
+  line-height:20px;
+  margin:10px;
 }
+div#scoreSelect h1{
+	margin-top:0px;
+	font-size:60px;
+}
+div.startGame div#check{
+	position:absolute;
+	font-size:24px;
+	top:18%;
+	left:20%;
+	height:100%;
+	width:100%;
+	background-image:url(images/check.png);
+	background-size:60%;
+	background-repeat:no-repeat;
+}
+div#startGame div#check{
+	position:absolute;
+	font-size:24px;
+	top:18%;
+	left:20%;
+	height:100%;
+	width:100%;
+	background-image:url(images/check.png);
+	background-size:60%;
+	background-repeat:no-repeat;
+}
+
 
