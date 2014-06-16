@@ -2,6 +2,11 @@
 
 setTimeout(function () {   window.scrollTo(0, 1); }, 1000);
 
+$(window).bind("load", function() {
+   // code here
+   //$("h1#title").fitText();
+});
+
 //Initial load of page
 $(document).ready(sizeContent);
 
@@ -12,6 +17,9 @@ $(window).resize(sizeContent);
 //Dynamically assign height
 function sizeContent() {
 	
+	//resize plugin stuff
+  	//setTimeout($("h1#title").fitText(),1000);
+	
 	
 	//determine sizes
 	var pageWidth = $("body").width();
@@ -20,6 +28,8 @@ function sizeContent() {
 	$("#pageContainer").css("width",pageWidth*2);
 	
 	$(".page").css("width",pageWidth);
+	
+	
 }
 
 var playerCount = 0;
@@ -30,6 +40,7 @@ var colorNumber = 0;
 
 $(document).ready(function() {
 	
+	//$("h1#title").fitText();
 	
 	
 	$( "div#plus" ).mousedown(function(){
