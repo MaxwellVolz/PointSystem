@@ -5,6 +5,7 @@ setTimeout(function () {   window.scrollTo(0, 1); }, 1000);
 $(window).bind("load", function() {
    // code here
    //$("h1#title").fitText();
+    
 });
 
 //Initial load of page
@@ -65,6 +66,7 @@ $(document).ready(function() {
 		startIt();
 		$( "div#scoreboard" ).css("top","-100%");
 		$( "div#scoreboard" ).css("z-index","20");
+		sizeIt();
 	});
 	
 	
@@ -82,7 +84,7 @@ function startIt(){
 	while (x > 0) { 
 		$("tr#mainRow td#mainD").append( 
 		
-			"<td><div class='testBox' id='scoreRow"+x+"'><div class='scoreContainer' id='"+x+"'><h1 class='scoreTotal' id='scoreTotal"+x+"' >0</h1></div><div id='line'></div><div id='scoreSelect'><div id='"+x+"' class='minus'><h1>-</h1></div><div id='"+x+"' class='plus' value='"+x+"'><h1>+</h1></div><div id='playersSpacing'><h1 id='players"+x+"'>0</h1></div></div><div class='scoreLog' id='scoreLog"+x+"'><div id='scoreLogContainer'><table class='scoreTable' id='scoreTable"+x+"'><tbody></tbody></table></div></div><div class='startGame' id='addScore"+x+"' value='"+x+"'><div id='check'></div></div></div></td>"	
+			"<td><div class='testBox' id='scoreRow"+x+"'><div class='scoreContainer' id='"+x+"'><h1 class='scoreTotal' id='scoreTotal"+x+"' >0</h1></div><div class='scoreLog' id='scoreLog"+x+"'><div id='scoreLogContainer'><table class='scoreTable' id='scoreTable"+x+"'><tbody></tbody></table></div><div class='startGame' id='addScore"+x+"' value='"+x+"'><div id='check'></div></div></div><div id='scoreSelectContainer'><div id='scoreSelect'><div id='"+x+"' class='minus'><h1>-</h1></div><div id='"+x+"' class='plus' value='"+x+"'><h1>+</h1></div><div id='playersSpacing'><h1 id='players"+x+"'>0</h1></div></div></div></div></td>"	
 			
 			);
 			
@@ -197,4 +199,8 @@ function colorIt(c){
 	}
 	
 	
+}
+
+function sizeIt(){
+	$("div#scoreSelect > h1").fitText();
 }

@@ -3,7 +3,7 @@ PointSystem
 
 Simple score pad replacement app
 
-
+Current live testing at  http://sflyf.com/pointSystem/
 
 
 
