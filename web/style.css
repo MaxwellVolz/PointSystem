@@ -107,10 +107,9 @@ h1.scoreTotal{
 }
 div.scoreContainer{
 	position:relative;
-	height:30%;
+	height:25%;
 	width:100%;
 	z-index:20;
-	height:30%;
 }
 div#line{
 	position:relative;
@@ -123,7 +122,7 @@ div#line{
 }
 div#scoreSelectContainer{
 	position:absolute;
-	bottom:5px;
+	bottom:0%;
 	width:100%;
 	height:20%;
 }
@@ -165,7 +164,7 @@ div.scoreLog{
 	width:80%;
 	top:2%;
 	margin-left:10%;
-	height:45%;
+	height:55%;
 	overflow:scroll;
 	background-color:white; 
 	overflow: hidden;  
@@ -193,6 +192,9 @@ input#resetGame{
 	height:10%;
 	left:2%;
 }
+div#scoreSelectContainer h1{
+	margin-bottom:0px;
+}
 
 td{
 	border: solid;
@@ -207,28 +209,31 @@ tr.scoreEntry td,tr.scoreEntry h3{
 }
 div#scoreSelect h1{
 	margin-top:0px;
-	font-size: 5vw;
+	font-size: 8vw;
 }
+
 div.startGame div#check{
 	position:absolute;
 	font-size: 5vw;
-	top:18%;
-	left:30%;
-	height:100%;
-	width:100%;
+	top:10%;
+	left:20%;
+	height:80%;
+	width:60%;
 	background-image:url(images/check.png);
-	background-size:40%;
+	background-size:contain;
+	background-position:center;
 	background-repeat:no-repeat;
 }
 div#startGame div#check{
 	position:absolute;
 	font-size:24px;
-	top:18%;
+	top:10%;
 	left:20%;
-	height:100%;
-	width:100%;
+	height:80%;
+	width:60%;
 	background-image:url(images/check.png);
-	background-size:60%;
+	background-size:contain;
+	background-position:center;
 	background-repeat:no-repeat;
 }
 
